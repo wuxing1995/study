@@ -36,3 +36,8 @@ git 删除
 	git rm <file>	
 		git commmit -m <file>	删除暂存区(版本库)中的文件
 }
+
+远程SSH仓库
+{
+	$ ssh-keygen -t rsa -C "youremail@example.com"		生成私人和对公密钥
+}
