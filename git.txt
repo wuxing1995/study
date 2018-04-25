@@ -43,3 +43,10 @@ git 删除
 {
 	$ ssh-keygen -t rsa -C "youremail@example.com"		生成私人和对公密钥
 }
+
+
+创建号github上的git仓库后 在本地仓库下写入
+{
+	 git remote add origin git@github.com:wuxing1995/study.git	关联远程链接库
+	 git push origin master		将本地库的内容推送到远程
+}
