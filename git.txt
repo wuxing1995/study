@@ -1,0 +1,38 @@
+git 
+{
+	$mkdir *	创建文件夹
+	$cd *		到指定路径
+	$pwd		显示当前目录
+}
+$git init						将这个目录变成git管理的仓库
+$git add *						将文件添加到仓库
+$git commit -m "这里写注释"		提交修改
+$git status 					检查仓库状态
+$git diff						检查修改内容
+$git reset --hard commit_id		回退到指定版本号(HEAD指向当前版本，HEAD^指向上一个版本)
+$git log 						查看提交历史
+$git reflog						查看历史命令
+
+将文件添加到git版本库分两步
+{
+	1.git add 		把文件修改添加到暂存区(stage)
+	2.git commit 	把暂存区的所有内容提交到当前分支
+	创建GIT版本库时，Git自动为我们创建了唯一的一个master
+	所以git commit就是往master分支上提交更改
+	做出修改之后 未add到暂存区stage中 则不会将修改提交commit
+	只有add后会成功提交修改
+}
+git撤销
+{
+	git checkout -- <file>	修改文件后 未add 撤销(工作区修改)	
+	
+	git reset HEAD <file>	修改文件后 已add 未commit 将暂存区数据回退到工作区
+	git checkout -- <file>	  撤销工作区修改(HEAD表示最新版本)
+}
+git 删除
+{
+	rm <file>					删除工作区文件(添加到暂存区(版本库))
+		git checkout -- <file>	误删工作区文件，将版本库中的文件替换到工作区
+	git rm <file>	
+		git commmit -m <file>	删除暂存区(版本库)中的文件
+}
