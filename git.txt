@@ -4,6 +4,8 @@ git
 	$cd *		到指定路径
 	$pwd		显示当前目录
 }
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
 $git init						将这个目录变成git管理的仓库
 $git add *						将文件添加到仓库
 $git commit -m "这里写注释"		提交修改
