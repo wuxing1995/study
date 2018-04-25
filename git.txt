@@ -53,4 +53,13 @@ git 删除
 在github上创建仓库克隆到本地
 {
 	git clone git@github.com:wuxing1995/gitskills.git	
-}
+	22port错误：主机目录下 vim .ssh/config
+	插入：	 
+		Host github.com  
+		User 1521761498@qq.com  
+		Hostname ssh.github.com  
+		PreferredAuthentications publickey  
+		IdentityFile ~/.ssh/id_rsa  
+		Port 443
+	测试：
+		ssh -T git@github.com  
